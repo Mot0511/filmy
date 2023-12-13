@@ -30,6 +30,14 @@ export default function Player ({width, height, url}: {width: string, height: st
                     setPlayed(data.playedSeconds)
                     setLoaded(data.loadedSeconds)
                 }}
+                config={{
+                    file: {
+                      attributes: {
+                        crossOrigin: "true",
+                      }
+                    }
+                  }}
+                
             />
             <div className={cl.controls}>
                 <button className={cl.button} onClick={() => setIsPlay(!isPlay)}>{isPlay ? <span className="material-symbols-outlined">pause_circle</span> : <span className="material-symbols-outlined">play_circle</span>}</button>   
